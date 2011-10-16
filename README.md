@@ -2,6 +2,24 @@
 
 A small library for reading [`.ini`](http://en.wikipedia.org/wiki/INI_file) files into Clojure maps.
 
+## Installation
+
+### Using maven
+
+Add 
+
+    <dependency>
+      <groupId>clojure-ini</groupId>
+      <artifactId>clojure-ini</artifactId>
+      <version>0.0.1</version>
+    </dependency>
+
+to your `pom.xml` file.
+
+### Using leiningen
+
+Add `[clojure-ini "0.0.1"]` as a dependency to your `project.clj`.
+
 ## Usage
 
 `(read-ini source & opts)` where `source` can be anything accepted by
