@@ -1,4 +1,4 @@
-(ns clj-ini.core
+(ns clojure-ini.core
   (:require [clojure.string :as s]
             [clojure.java.io :as io]))
 

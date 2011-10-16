@@ -1,4 +1,4 @@
-# clj-ini
+# clojure-ini
 
 A small library for reading [`.ini`](http://en.wikipedia.org/wiki/INI_file) files into Clojure maps.
 
@@ -30,7 +30,7 @@ A small library for reading [`.ini`](http://en.wikipedia.org/wiki/INI_file) file
 
 REPL session:
 
-    > (use 'clj-ini.core)
+    > (use 'clojure-ini.core)
     > (read-ini "conf.ini" :keywordize? true)
     {:database {:file "payroll.dat"
                 :port "143"
