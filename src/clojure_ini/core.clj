@@ -54,6 +54,7 @@
               trim? true
               allow-comments-anywhere? true
               comment-char \;}}]
+  {:pre [(char? comment-char)]}
   (let [kw (if keywordize? keyword identity)
         trim (if trim? s/trim identity)]
     (with-open [r (io/reader in)]
@@ -61,4 +62,4 @@
            (map #(strip-comment % comment-char allow-comments-anywhere?))
            (remove (fn [s] (every? #(Character/isWhitespace %) s)))
            (map #(parse-line % kw trim))
-            mapify))))
+           mapify))))

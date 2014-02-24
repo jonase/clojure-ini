@@ -11,14 +11,14 @@ Add
     <dependency>
       <groupId>clojure-ini</groupId>
       <artifactId>clojure-ini</artifactId>
-      <version>0.0.1</version>
+      <version>0.0.2</version>
     </dependency>
 
 to your `pom.xml` file.
 
 ### Using leiningen
 
-Add `[clojure-ini "0.0.1"]` as a dependency to your `project.clj`.
+Add `[clojure-ini "0.0.2"]` as a dependency to your `project.clj`.
 
 ## Usage
 
@@ -58,6 +58,6 @@ REPL session:
 
 ## License
 
-Copyright (C) 2011 Jonas Enlund
+Copyright (C) 2011-2014 Jonas Enlund
 
 Distributed under the Eclipse Public License, the same as Clojure.
