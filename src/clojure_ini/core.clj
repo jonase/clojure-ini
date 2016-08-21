@@ -10,7 +10,7 @@
       false)))
 
 
-(defn strip-braces [kw]
+(defn- strip-braces [kw]
   (let [kword (name kw)]
     (let [n (.indexOf kword "[")]
       (if (not (neg? n))
