@@ -50,6 +50,7 @@ Add `[clojure-ini "0.0.2"]` as a dependency to your `project.clj`.
     users[]=mike
     users[]=nike
     users[]=joe
+    users[]=tom
     
 
 REPL session:
