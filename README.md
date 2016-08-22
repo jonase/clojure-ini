@@ -45,12 +45,19 @@ Add `[clojure-ini "0.0.2"]` as a dependency to your `project.clj`.
     server=192.0.2.62     
     port=143
     file = payroll.dat
+    
+    [access-allowed]
+    users[]=mike
+    users[]=nike
+    users[]=joe
+    
 
 REPL session:
 
     > (use 'clojure-ini.core)
     > (read-ini "conf.ini" :keywordize? true)
-    {:database {:file "payroll.dat"
+    {:access-allowed {:users ("tom" "joe" "nika" "mike")}
+     :database {:file "payroll.dat"
                 :port "143"
                 :server "192.0.2.62"}
      :organization "Acme Widgets Inc." 

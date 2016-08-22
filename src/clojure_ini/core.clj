@@ -5,9 +5,7 @@
 
 (defn- is-list? [kword]
   (let [rkw (reverse (name kword))]
-    (if (and (= (first rkw) \]) (= (second rkw) \[))
-      true
-      false)))
+    (and (= (first rkw) \]) (= (second rkw) \[))))
 
 
 (defn- strip-braces [kw]
