@@ -2,8 +2,8 @@
   (:require [clojure.string :as s]
             [clojure.java.io :as io]))
 
-(defn- parse-line [s kw trim]
-  (if (= (first s) \[) 
+(defn- parse-line [^String s kw trim]
+  (if (= (first s) \[)
     (-> s (subs 1 (.indexOf s "]")) trim kw)
     (let [n (.indexOf s "=")]
       (if (neg? n)
@@ -11,7 +11,7 @@
         [(-> s (subs 0 n) trim kw)
          (-> s (subs (inc n)) trim)]))))
 
-(defn- strip-comment [s chr allow-anywhere?]
+(defn- strip-comment [^String s chr allow-anywhere?]
   (let [n (.indexOf s (int chr))]
     (if (and (not (neg? n))
              (or allow-anywhere?
@@ -60,6 +60,6 @@
     (with-open [r (io/reader in)]
       (->> (line-seq r)
            (map #(strip-comment % comment-char allow-comments-anywhere?))
-           (remove (fn [s] (every? #(Character/isWhitespace %) s)))
+           (remove (fn [s] (every? #(Character/isWhitespace ^char %) s)))
            (map #(parse-line % kw trim))
            mapify))))
